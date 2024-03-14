@@ -190,8 +190,8 @@ class Godcmd(Plugin):
                 with open(config_path, "w") as f:
                     json.dump(gconf, f, indent=4)
         if gconf["password"] == "":
-            # self.temp_password = "".join(random.sample(string.digits, 4))
-            self.temp_password = "8752"
+            self.temp_password = "".join(random.sample(string.digits, 4))
+            # self.temp_password = "8752"
             logger.info("[Godcmd] 因未设置口令，本次de的临时口令为%s。" % self.temp_password)
         else:
             self.temp_password = None
